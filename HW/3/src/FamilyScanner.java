@@ -1,11 +1,11 @@
+import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class FamilyScanner {
     public static Scanner input = new Scanner(System.in);
 
-    public static void familyScanner(String text, List<Family> familyMembers) {
+    public static void familyScanner(String text, List<Family> familyMembers) throws IOException {
         System.out.println(text);
         System.out.print("Ввод: ");
         Integer num = input.nextInt();
@@ -26,6 +26,14 @@ public class FamilyScanner {
 
         if (num == 2) {
             FamilyPrinter.familyPrinter(familyMembers);
+        }
+
+        if (num == 3) {
+            FamilyImport.familyImport();
+        }
+
+        if (num == 3) {
+            FamilyExport.familyExport(familyMembers);
         }
     }
 }
