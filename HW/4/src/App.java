@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 // С учетом информации полученной ранее знакомимся с параметрическим полиморфизмом и продолжаем погружаться в ООП.
 // Спроектировать и реализовать планировщик дел для работы с задачами разных приоритетов.
 
@@ -10,9 +12,7 @@
 // другие компоненты
 
 public class App {
-    public static void main(String[] args) {
-        FamilyScanner.familyScanner("Выберите действие: \n 1 - добавить элемент дерева\n" +
-                                " 2 - показать все \n 3 - импортировать в файл\n 4 - экспортировать в файл\n",
-                                familyMembers);
+    public static void main(String[] args) throws IOException {
+        ToDoListMenu.toDoListMenu("Выберите действие: \n 1 - добавить задачу\n 2 - показать все");
     }
 }
