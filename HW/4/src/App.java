@@ -10,5 +10,9 @@
 // другие компоненты
 
 public class App {
-    
+    public static void main(String[] args) {
+        FamilyScanner.familyScanner("Выберите действие: \n 1 - добавить элемент дерева\n" +
+                                " 2 - показать все \n 3 - импортировать в файл\n 4 - экспортировать в файл\n",
+                                familyMembers);
+    }
 }
