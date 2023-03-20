@@ -3,7 +3,7 @@
 public class App {
 
   public static void main(String[] args) {
-    new Innerapp(null).write();
+    new InnerA(null).print();
   }
 }
 
@@ -11,7 +11,7 @@ interface IInterface {
   void print();
 }
 
-class Innerapp {
+class Innerapp implements IInterface {
   IInterface v;
 
   public Innerapp(IInterface v) {
@@ -22,4 +22,20 @@ class Innerapp {
     v.print();
   }
 
+  @Override
+  public void print() {
+    System.out.println("Work");
+  }
+
+}
+
+class InnerA extends Innerapp {
+  public InnerA(IInterface v) {
+    super(v);
+  }
+
+  @Override
+  public void print() {
+    System.out.println("Work");
+  }
 }
